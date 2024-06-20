@@ -10,6 +10,7 @@ dependencies:
   bootpay: ^4.9.91
   flutter:
     sdk: flutter
+  flutter_dotenv: ^5.1.0
 
 dev_dependencies:
   flutter_test:
@@ -18,3 +19,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - .env
