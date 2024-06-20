@@ -37,8 +37,12 @@ class _MainAppState extends State<MainApp> {
   }
 
   void loadPayment(BuildContext context) {
-    payment.loadPayment(
-        context, makeItemList(), makeOption(), null, null, null);
+    payment.loadPayment(context, makeItemList(), makeOption(), (String data) {
+      print('done $data');
+    }, (String error) {
+      print('error $error');
+      return true;
+    }, null);
   }
 
   void setPayload(List<Item> items, PayLoadOption option) {
